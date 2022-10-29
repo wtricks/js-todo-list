@@ -1,0 +1,179 @@
+*,
+::after, 
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;  
+}
+
+h1 span {
+    color: rgb(35, 247, 152);
+}
+
+h1 span span {
+    color: rgb(183, 0, 255);
+}
+
+/* MAIN STYLE */
+main {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    height: 400px;
+}
+
+main .form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+}
+
+main form {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f7f7f7;
+    display: flex;
+    width: 100%;
+}
+
+main input {
+    padding: 10px;
+    height: 37px;
+    border-radius: 4px;
+    transition: 0.3s;
+    outline: 0;
+    border: 1px solid transparent;
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+main input:focus {
+    border-color: blueviolet;
+}
+
+main input[type="submit"] {
+    background-color: blueviolet;
+    color: #fff;
+    cursor: pointer;
+    width: max-content;
+    margin-left: 12px;
+}
+
+main input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+main input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+/* LIST STYLE */
+.empty-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 180px;
+}
+
+.empty-list span {
+    font-size: 14px;
+}
+
+.empty-list .icon {
+    font-size: 25px;
+    color: blueviolet;
+} 
+
+.list-wrapper {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.list-wrapper .list-item {
+    width: 100%;
+    display: flex;
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.list-wrapper .list-item:hover {
+    background-color: #f7f7f750;
+}
+
+.list-wrapper .list-item .marker {
+    height: 14px;
+    width: 14px;
+    margin-right: 12px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid blueviolet;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.list-wrapper .list-item.marked span {
+    text-decoration: line-through;
+}
+
+.list-wrapper .list-item.marked .marker {
+    background-color: blueviolet;
+}
+
+.list-wrapper .list-item .icons {
+    display: flex;
+    margin-left: 10px;
+}
+
+.list-wrapper .list-item .icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.list-wrapper .list-item .icon:hover {
+    transform: scale(1.1);
+}
+
+.list-wrapper .list-item .icon:active {
+    transform: scale(0.95);
+}
+
+.list-wrapper .list-item .delete,
+.list-wrapper .list-item.marked .edit {
+    display: none;
+}
+
+.list-wrapper .list-item.marked .delete {
+    display: block;
+}
+
+.list-wrapper .list-item svg {
+    height: 14px;
+    width: 14px;
+}
